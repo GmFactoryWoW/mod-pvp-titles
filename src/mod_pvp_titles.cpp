@@ -67,7 +67,7 @@ enum Titles
     MARSHAL                  = 12,
     FIELD_MARSHAL            = 13,
     GRAND_MARSHAL            = 14,
-    
+
     // Horde
     SCOUT                    = 15,
     GRUNT                    = 16,
@@ -122,7 +122,7 @@ public:
     {
         if (sConfigMgr->GetOption<bool>("PvPTitles.Enable", false))
         {
-            if (sConfigMgr->GetOption<bool>("PvPTitles.Announce", true))
+            if (sConfigMgr->GetOption<bool>("PvPTitles.Announce", true) && false)
             {
                 ChatHandler(player->GetSession()).SendSysMessage("This server is running the |cff4CFF00PvPTitles |rmodule.");
             }
@@ -225,7 +225,7 @@ public:
     }
 };
 
-void AddPvpTitlesScripts() 
+void AddPvpTitlesScripts()
 {
     new PVPTitles();
 }
